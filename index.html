@@ -118,7 +118,7 @@
   <figure class="highlight html"><table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"https://s3-eu-west-1.amazonaws.com/s3.comexposium/js/loader.min.js"</span>&gt;</span></span><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
 </p>
 
-    <p>Pour que le widget <strong>ComexposiumConnect</strong> fonctionne correctement, il faut soit chargé jQuery dans la page d'intégration. Nous vous encourageons à utiliser au moins jQuery 2.0, mais nous recommandons fortement d'utiliser une version plus récente (3.x).<br />
+    <p>Pour que le widget <strong>ComexposiumConnect</strong> fonctionne correctement, il faut que soit chargé jQuery dans la page d'intégration. Nous vous encourageons à utiliser au moins jQuery 2.0, mais nous recommandons fortement d'utiliser une version plus récente (3.x).<br />
        Par mesure de sécurité, si nous ne détectons pas de jQuery ou une version antérieure à la version 2.0, nous chargeons dynamiquement jQuery 3.1.1 sans prendre en charge la variable dollar ($). Cela vous permet d'utiliser votre propre version ou une autre bibliothèque utilisant cette variable.
 La version injecté par le widget est :<br />
 <figure class="highlight js"><table>
@@ -137,7 +137,7 @@ Si la variable "$" est correcte avec la version, nous le copions dans window.cxp
 Les valeurs à renseigner dans les attributs du code HTML sont propres à chaque évènement, chaque salon et à chaque session. Ils vous seront communiqués directement par votre contact chez Comexposium.<br />
 Votre contact chez Comexposium devra également <b>autoriser tous les noms de domaine sur lesquels vous appelez et chargez le widget</b> sans quoi vous aurez l'erreur suivante dans la console javascript de votre navigateur :<br /> <i><b style="color:red;">wrong application token</b></i>
 </p>
-<p>Une fois que vos noms de domaine ont été autorisées par Comexposium, dans le code HTML de la page où vous souhaitez utiliser ComexposiumConnect, ajoutez le code suivant :</p>
+<p>Une fois que vos noms de domaine ont été autorisés par Comexposium, dans le code HTML de la page où vous souhaitez utiliser ComexposiumConnect, ajoutez le code suivant :</p>
 <figure class="highlight html">
   <table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"cxpmClientAccountWidget"</span> <br />     <span class="attr">data-salon</span>=<span class="string">"[SHOWROOM_NAME]"</span>
      <span class="attr">data-sessionSalon</span>=<span class="string">"[SHOWROOM_SESSION]"</span> <br />     <span class="attr">data-application</span>=<span class="string">"[YOUR_APPLICATION_ID]"</span>
@@ -145,7 +145,7 @@ Votre contact chez Comexposium devra également <b>autoriser tous les noms de do
      &gt;</span><span class="undefined"></span>
     <span class="comment">&lt;!-- Nothing here --&gt;</span>
 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-<p>Chacun des attribut de cette div renvoie à l'événement sur lequel il sera utilisé :</p>
+<p>Chacun des attributs de cette div renvoie à l'événement sur lequel il sera utilisé :</p>
 <p>
   <ul>
     <li>[SHOWROOM_NAME] : Le nom du salon en rapport avec votre utilisation.</li>
@@ -241,8 +241,8 @@ Votre contact chez Comexposium devra également <b>autoriser tous les noms de do
 </pre></td></tr></tbody></table></figure>
 
 <h2 id="Evenements"><a href="#Evenements" class="headerlink" title="Les Evenements" data-scroll="">Les Evenements Javascript</a></h2>
-<p>Une fois correctement chargée, la bibliothèque déclenche certains événements pour faciliter votre flux de travail lors de l'utilisation de ComexposiumConnect. Gardez à l'esprit que nous créons une variable Javascript nommée window.cxpm.jQuery avec la version requise de jQuery.
-En dehors de comexposiumConnectLoaded, tous les événements sont déclenchés avec window.cxpm.jQuery.</p>
+<p>Une fois correctement chargée, la bibliothèque déclenche certains événements pour faciliter votre flux de travail lors de l'utilisation de ComexposiumConnect. Gardez à l'esprit que nous créons une variable Javascript nommée <i>window.cxpm.jQuery</i> avec la version requise de jQuery.
+En dehors de comexposiumConnectLoaded, tous les événements sont déclenchés avec <i>window.cxpm.jQuery</i>.</p>
 <h3 id="Widget-charge"><a href="#Widget-charge" class="headerlink" title="Widget chargé" data-scroll="">comexposiumConnectLoaded</a></h3>
 <p>Lorsque la bibliothèque est entièrement chargée, un événement est déclanché pour vous informer que tout est prêt.
 Vous pouvez écouter vos évènements personnalisés à partir du moment où le widget est prêt, cet événement sera déclenché depuis le scope global jQuery ($ ou jQuery).</p>
@@ -276,7 +276,7 @@ Le callback reçoit 2 paramètres, l'événement et l'adresse e-mail utilisée p
 
 <h2 id="Recuperation-email"><a href="#Recuperation-email" class="headerlink" title="Récuperation-email" data-scroll="">Récupérer l'email de l'utilisateur à la connexion</a></h2>
 <p>L'utilisateur peut être enregistré automatiquement via le cookie SSO ou remplir le formulaire de connexion afin d'être connecté à ComexposiumConnect.
-Afin de récupérer l'email de l'utilisateur, jeton JWT et savoir si l'email connecté est un exposant sur la session en cours.</p>
+Il est ensuite possible de récupérer l'email de l'utilisateur, le jeton JWT et savoir si l'email connecté est un exposant sur la session en cours.</p>
 <p>Pour cela, vous pouvez écouter l'événement de jQuery nommé <b>"comexposiumConnectLogged"</b> et qui peut prendre 4 paramètres dont l'email :</p>
 <figure class="highlight js"><table><tbody><tr><td class="code"><pre>
   <span class="line">$(<span class="keyword">document</span>).<span class="keyword">on</span>("comexposiumConnectLogged",<span class="keyword">function</span>(event, email, token, isExhibitor){
@@ -295,7 +295,7 @@ Afin de récupérer l'email de l'utilisateur, jeton JWT et savoir si l'email con
   >
   </div>
 </div>
-<p>Pour vérifier les information côté serveur, vous pouvez également <a href="http://docs.comexposium-sso.com/" target="_blank">faire un appel vers notre API</a> pour vous assurer que le token ou l'email de l'utilisateur est bien valide.</p>
+<p>Pour vérifier les informations côté serveur, vous pouvez également <a href="http://docs.comexposium-sso.com/" target="_blank">faire un appel vers notre API</a> pour vous assurer que le token ou l'email de l'utilisateur est bien valide.</p>
 <script src="https://s3.eu-west-2.amazonaws.com/s3.preprod-comexposium/js/loader.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
