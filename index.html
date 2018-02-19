@@ -300,6 +300,8 @@ $(document).ready(function(){
   });
   $(document).on("comexposiumConnectLogged",function(event, email, token, isExhibitor){
    console.log(email, token, isExhibitor);
+   alert("Vous êtes connecté");
+   $("button").html("Vous êtes déjà connectés");
 });
 });
 </script>
