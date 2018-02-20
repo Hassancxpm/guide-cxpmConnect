@@ -237,10 +237,16 @@ Votre contact chez Comexposium devra également <b>autoriser tous les noms de do
      &gt;</span><span class="undefined"></span>
     <span class="comment">&lt;!-- Nothing here --&gt;</span>
 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-<p><i>Vous pouvez copier coller ce code dans la console de votre navigateur pour vous déconnecter à tout moment.</i></p>
+<p><i>Vous pouvez copier coller ce code dans la console de votre navigateur pour vous déconnecter à tout moment :</i></p>
 <figure class="highlight js"><table><tbody><tr><td class="code"><pre>
     <span class="line"><span class="keyword">comexposiumConnect</span>.<span class="string">logoutUser</span>();</span>
 </pre></td></tr></tbody></table></figure>
+
+<p><i>ou bien cliquer sur le bouton ci-dessous :</i></p>
+
+<div class="demo">
+  <button id="myOpenCapDisconnect">Déconnecter l'utilisateur</button>
+</div>
 
 <h2 id="Evenements"><a href="#Evenements" class="headerlink" title="Les Evenements" data-scroll="">Les Évènements Javascript</a></h2>
 <p>Une fois correctement chargée, la bibliothèque déclenche certains événements pour faciliter votre flux de travail lors de l'utilisation de ComexposiumConnect. Gardez à l'esprit que nous créons une variable Javascript nommée <i>window.cxpm.jQuery</i> avec la version requise de jQuery.
@@ -307,10 +313,14 @@ $(document).ready(function(){
   $("#myOpenCap").click(function(){
     comexposiumCap.openCap('register');
   });
+  $("#myOpenCapDisconnect").click(function(){
+    comexposiumConnect.logoutUser();
+    setTimeout(function(){window.location.reload();}, 1000);
+  });
   $(document).on("comexposiumConnectLogged",function(event, email, token, isExhibitor){
    console.log(email, token, isExhibitor);
    alert("Vous êtes connecté au comexposiumConnect");
-   $("button").html("Vous êtes déjà connectés");
+   $("#openCap, #OpenCap2, #myOpenCap").html("Vous êtes déjà connectés");
 });
 });
 </script>
