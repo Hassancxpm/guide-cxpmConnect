@@ -534,6 +534,7 @@ body.docs #nav {
   margin-right: 6px;
   /*width: 40px;*/
   height: 40px;
+  margin-top: 3px;
 }
 #mobile-bar {
   position: fixed;
