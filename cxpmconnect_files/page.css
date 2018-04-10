@@ -1551,6 +1551,13 @@ ul.demo li {
   iframe {
     margin: 0 !important;
   }
+  #widgetVisuel {
+    width: 100%;
+  }
+  td {
+    display: block;
+    width: auto;
+  }
 }
 .gitter-open-chat-button {
   background-color: #4fc08d;
@@ -1565,4 +1572,8 @@ ul.demo li {
 }
 .gitter-open-chat-button.is-displayed {
   opacity: 1;
+}
+#widgetVisuel {
+  max-width: 150%;
+  margin-top: 2em;
 }
