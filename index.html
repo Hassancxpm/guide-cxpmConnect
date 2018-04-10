@@ -121,7 +121,7 @@
 </p>
 
     <p>Pour que le widget <strong>ComexposiumConnect</strong> fonctionne correctement, il faut que soit chargé jQuery dans la page. Nous vous encourageons à utiliser au moins jQuery 2.0, mais nous recommandons fortement d'utiliser une version plus récente (3.x). <br />
-       Par mesure de sécurité, si nous ne détectons pas de jQuery ou une version antérieure à la version 2.0, nous chargeons dynamiquement jQuery 3.1.1 sans prendre en charge la variable dollar ($). Cela vous permet d'utiliser votre propre version ou une autre bibliothèque utilisant cette variable.
+       <br />Par mesure de sécurité, si nous ne détectons pas de jQuery ou une version antérieure à la version 2.0, nous chargeons dynamiquement jQuery 3.1.1 sans prendre en charge la variable dollar ($). Cela vous permet d'utiliser votre propre version ou une autre bibliothèque utilisant cette variable.
 La version injectée par le widget est :<br />
 <figure class="highlight js"><table>
   <tbody><tr><td class="code">
@@ -131,7 +131,8 @@ La version injectée par le widget est :<br />
 <li>Si la variable "$" existe mais pas dans la bonne version, nous la copions dans window.cxpm.jQuery.</li>
 </p>
 
-<p>Une fois le loader.js chargé et autorisé, vous avez accès aux variables globales <b>comexposiumCap</b> et <b>comexposiumConnect</b></p>
+<p>Une fois le script loader.js chargé et autorisé, vous avez accès aux variables globales <b>comexposiumCap</b> et <b>comexposiumConnect</b>.</p>
+<p>Il ne vous reste désormais plus qu'à inclure le <a href="#code-html" data-scroll="">code HTML</a> dans votre page pour faire fonctionner le widget.</p>
 
 
 <h2 id="code-html"><a href="#code-html" class="headerlink" title="Code-HTML" data-scroll="">Le code HTML</a></h2>
@@ -139,7 +140,7 @@ La version injectée par le widget est :<br />
 Les valeurs à renseigner dans les attributs du code HTML sont propres à chaque évènement, à chaque salon et à chaque session. Ils vous seront communiqués directement par votre contact chez Comexposium. <br />
 Votre contact chez Comexposium devra également <b>autoriser tous les noms de domaine sur lesquels vous appelez et chargez le widget</b> sans quoi vous aurez l'erreur suivante dans la console javascript de votre navigateur :<br /> <i><b style="color:#968e8e;">wrong application token</b></i>
 </p>
-<p>Une fois que vos noms de domaine ont été autorisés par Comexposium, dans le code HTML de la page où vous souhaitez utiliser ComexposiumConnect, ajoutez le code suivant :</p>
+<p>Une fois que tous vos noms de domaine ont été autorisés par Comexposium , que le script <a href="#script-loader" data-scroll="">loader.js</a> ainsi que votre version de jQuery sont bien chargés dans votre page, ajoutez le code suivant dans la partie body de votre code HTML où vous souhaitez intégrer le widget ComexposiumConnect :</p>
 <figure class="highlight html">
   <table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"cxpmClientAccountWidget"</span> <br />     <span class="attr">data-salon</span>=<span class="string">"[SHOWROOM_NAME]"</span>
      <span class="attr">data-sessionSalon</span>=<span class="string">"[SHOWROOM_SESSION]"</span> <br />     <span class="attr">data-application</span>=<span class="string">"[YOUR_APPLICATION_ID]"</span>
@@ -147,13 +148,13 @@ Votre contact chez Comexposium devra également <b>autoriser tous les noms de do
      &gt;</span><span class="undefined"></span>
     <span class="comment">&lt;!-- Nothing here --&gt;</span>
 <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
-<p>Chacun des attributs de cette div renvoie à l'événement sur lequel il sera utilisé :</p>
+<p>Il s'agit d'une simple div possédant 4 attributs. Chacun de ces attributs renvoie à l'événement sur lequel il sera configuré :</p>
 <p>
   <ul>
-    <li>[SHOWROOM_NAME] : Le nom du salon en rapport avec votre utilisation.</li>
-    <li>[SHOWROOM_SESSION] : Le nom de la session liée à votre utilisation</li>
-    <li>[YOUR_APPLICATION_ID] : Votre identifiant dans l'environnement ComexposiumConnect.<br /> Celui-ci est unique quel que soit le showroom ou la session.<br /> Il diffère également selon que vous soyez en production ou en pré-production.</li>
-    <li>[LANGUAGE] :Il peut prendre 2 valeurs possibles : "fre-FR" ou "eng-GB"</li>
+    <li><b>[SHOWROOM_NAME]</b> : Le nom du salon en rapport avec votre utilisation.</li>
+    <li><b>[SHOWROOM_SESSION]</b> : Le nom de la session liée à votre utilisation</li>
+    <li><b>[YOUR_APPLICATION_ID]</b> : Votre identifiant dans l'environnement ComexposiumConnect.<br /> Celui-ci est unique quel que soit le showroom ou la session.<br /> Il diffère également selon que vous soyez en production ou en pré-production.</li>
+    <li><b>[LANGUAGE]</b> :Il peut prendre 2 valeurs possibles : "fre-FR" ou "eng-GB"</li>
   </ul>
 
   <p class="success">Ces éléments vous seront transmis par votre contact chez Comexposium.</p>
