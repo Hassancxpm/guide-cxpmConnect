@@ -218,7 +218,7 @@ Votre contact chez Comexposium devra également <b>autoriser tous les noms de do
 </div>
 
 <h2 id="Ouvrir-interface-creation-sso"><a href="#Ouvrir-interface-creation-sso" class="headerlink" title="Ouvrir-interface-creation-sso" data-scroll="">Ouvrir l'interface de création de compte</a></h2>
-<p>Voici un exemple ci-dessous qui ouvre l'interface de création de compte SSO:</p>
+<p>Voici un exemple ci-dessous qui ouvre l'interface de création de compte SSO :</p>
 </p>
 <figure class="highlight js"><table><tbody><tr><td class="code"><pre>
   <span class="line">$(<span class="keyword">document</span>).ready(<span class="keyword">function</span>(){</span>
@@ -265,7 +265,7 @@ Votre contact chez Comexposium devra également <b>autoriser tous les noms de do
 En dehors de l'événement <i>comexposiumConnectLoaded</i>, tous les événements sont déclenchés avec <i>window.cxpm.jQuery</i>.</p>
 <h3 id="Widget-charge"><a href="#Widget-charge" class="headerlink" title="Widget chargé" data-scroll="">comexposiumConnectLoaded</a></h3>
 <p>Lorsque la bibliothèque est entièrement chargée, un événement est déclenché pour vous informer que tout est prêt.
-Vous pouvez écouter vos évènements personnalisés à partir du moment où le widget est prêt, cet événement sera déclenché depuis le scope global jQuery ($ ou jQuery).</p>
+Vous pouvez écouter vos évènements personnalisés à partir du moment où le widget est prêt, cet événement sera déclenché depuis le scope global jQuery ($ ou jQuery) :</p>
 
 <figure class="highlight js"><table><tbody><tr><td class="code"><pre>
   <span class="line">$(<span class="keyword">document</span>).<span class="keyword">on</span>("comexposiumConnectLoaded",<span class="keyword">function</span>(){
@@ -277,7 +277,7 @@ Vous pouvez écouter vos évènements personnalisés à partir du moment où le 
 </pre></td></tr></tbody></table></figure>
 
 <h3 id="Utilisateur-connecte"><a href="#Utilisateur-connecte" class="headerlink" title="Utilisateur connecté" data-scroll="">comexposiumConnectLogged</a></h3>
-<p>Cet événement est déclenché lorsque l'utilisateur est connecté en SSO au ComexposiumConnect. Cela peut se produire lors du chargement de la page (l'utilisateur est déjà connecté au système) ou lors de la soumission du formulaire de connexion.</p>
+<p>Cet événement est déclenché lorsque l'utilisateur est connecté en SSO au ComexposiumConnect. Cela peut se produire lors du chargement de la page (l'utilisateur est déjà connecté au système) ou lors de la soumission du formulaire de connexion :</p>
 <figure class="highlight js"><table><tbody><tr><td class="code"><pre>
   <span class="line">$(<span class="keyword">document</span>).<span class="keyword">on</span>("comexposiumConnectLogged",<span class="keyword">function</span>(){
     <span class="line"><span class="comment"><i>Execute quelque chose</i></span></span>
@@ -286,7 +286,7 @@ Vous pouvez écouter vos évènements personnalisés à partir du moment où le 
 
 <h3 id="Utilisateur-cree"><a href="#Utilisateur-cree" class="headerlink" title="Utilisateur creé" data-scroll="">comexposiumConnectRegisterOk</a></h3>
 <p>Cet événement indique que l'utilisateur a fermé l'interface après une création de compte.
-Le callback reçoit 2 paramètres, l'événement et l'adresse e-mail utilisée pour créer le compte</p>
+Le callback reçoit 2 paramètres, l'événement et l'adresse e-mail utilisée pour créer le compte :</p>
 
 <figure class="highlight js"><table><tbody><tr><td class="code"><pre>
   <span class="line">window.cxpm.jQuery(<span class="keyword">document</span>).<span class="keyword">on</span>("comexposiumConnectRegisterOk",<span class="keyword">function</span>(event, email){
