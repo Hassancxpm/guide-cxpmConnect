@@ -79,6 +79,7 @@
       <li><a class="section-link" data-scroll="" href="#Exemple">Exemple</a></li>
       <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-connexion-sso">Ouvrir l'interface de connexion</a></li>
       <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-creation-sso">Ouvrir l'interface de création de compte</a></li>
+      <li><a class="section-link" data-scroll="" href="#Verifier-connexion">Vérifier si l'utilisateur est connecté</a></li>
       <li><a class="section-link" data-scroll="" href="#Deconnecter-utilisateur">Déconnecter un utilisateur</a></li>
       <li><a class="section-link" data-scroll="" href="#Evenements">Les Évènements</a></li>
       <ul>
@@ -238,6 +239,28 @@ Votre contact chez Comexposium devra également <b>autoriser tous les noms de do
 
 <p class="tip">Sur l'environnemement de pré-production, les emails que vous recevez normalement (création de compte, mot de passe oublié, newsletter... ) sont tous dirigés vers notre boite mail interne <b>dwebetdsi@gmail.com</b> dont vous pourrez demander l'accès à votre contact chez Comexposium.</p>
 
+<h2 id="Verifier-connexion"><a href="#Verifier-connexion" class="headerlink" title="Vérifier si l'utilisateur est connecté" data-scroll="">Vérifier si l'utilisateur est connecté</a></h2>
+<p>Vous pouvez vérifier si un utilisateur est connecté. Cette méthode renvoie un booléen. <br /> <i>true</i> : l'utilisateur est connecté <br /> <i>false</i> : l'utilisateur n'est pas connecté</p>
+<!-- <figure class="highlight html">
+  <table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"cxpmClientAccountWidget"</span> <br />     <span class="attr">data-salon</span>=<span class="string">"exemple"</span>
+     <span class="attr">data-sessionSalon</span>=<span class="string">"exemple_2018"</span> <br />     <span class="attr">data-application</span>=<span class="string">"2a6d06fc8089bbff0889aadc02d4a14ac1bdd03a"</span>
+     <span class="attr">data-language</span>=<span class="string">"fre-FR"</span>
+     &gt;</span><span class="undefined"></span>
+    <span class="comment">&lt;!-- Nothing here --&gt;</span>
+<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></tbody></table></figure>
+<p><i>Vous pouvez copier coller ce code dans la console de votre navigateur pour vous déconnecter à tout moment :</i></p> -->
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre>
+  <span class="line">$(<span class="keyword">document</span>).ready(<span class="keyword">function</span>(){</span>
+    <span class="line">comexposiumCap.isUserLogged()</span>
+    <span class="line"><span class="comment"><i>Renvoie un booléen</i></span></span>
+  <span class="line">});</span>
+</pre></td></tr></tbody></table></figure>
+
+<div class="demo">
+  <button id="isUserLoggedDemo">Vérifier si l'utilisateur est connecté</button>
+</div>
+
+
 <h2 id="Deconnecter-utilisateur"><a href="#Deconnecter-utilisateur" class="headerlink" title="Déconnecter un utilisateur" data-scroll="">Déconnecter un utilisateur</a></h2>
 <p>Vous pouvez déconnecter l'utilisateur comme ceci :</p>
 <!-- <figure class="highlight html">
@@ -319,6 +342,9 @@ Il est ensuite possible de récupérer l'email de l'utilisateur, le jeton JWT et
 <script src="https://s3.eu-west-2.amazonaws.com/s3.preprod-comexposium/js/loader.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
+  $("#isUserLoggedDemo").click(function(){
+    alert(comexposiumCap.isUserLogged())
+  });
   $("#openCap, #OpenCap2").click(function(){
     comexposiumCap.openCap('login');
   });
