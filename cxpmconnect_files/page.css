@@ -34,7 +34,7 @@ pre .symbol,
 pre .symbol .string,
 pre .value,
 pre .regexp {
-  color: #42b983;
+  color: #1489d4;
 }
 pre .title {
   color: #a6e22e;
@@ -63,7 +63,7 @@ pre .apache .tag,
 pre .apache .cbracket,
 pre .tex .command,
 pre .prompt {
-  color: #42b983;
+  color: #1489d4;
 }
 pre .comment,
 pre .java .annotation,
@@ -238,7 +238,7 @@ a.button.has-icon > svg {
 }
 a.button.white {
   background-color: #fff;
-  color: #42b983;
+  color: #1489d4;
 }
 a.button.gray {
   background-color: #f6f6f6;
@@ -365,7 +365,7 @@ a.button.gray {
   display: block;
 }
 #nav .nav-dropdown a:hover {
-  color: #42b983;
+  color: #1489d4;
 }
 #nav .arrow {
   display: inline-block;
@@ -470,7 +470,7 @@ body.docs #nav {
   content: "";
   width: 0;
   height: 0;
-  border-left: 5px solid #42b983;
+  border-left: 5px solid #1489d4;
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
   position: absolute;
@@ -484,7 +484,7 @@ body.docs #nav {
 }
 .nav-link:hover,
 .nav-link.current {
-  border-bottom: 3px solid #42b983;
+  border-bottom: 3px solid #1489d4;
 }
 .nav-link.team {
   margin-left: 10px;
@@ -493,7 +493,7 @@ body.docs #nav {
   position: absolute;
   top: 3px;
   left: 110%;
-  background-color: #42b983;
+  background-color: #1489d4;
   color: #fff;
   line-height: 16px;
   height: 16px;
@@ -519,7 +519,7 @@ body.docs #nav {
   vertical-align: middle !important;
 }
 .search-query:focus {
-  border-color: #42b983;
+  border-color: #1489d4;
 }
 #logo {
   display: inline-block;
@@ -844,7 +844,7 @@ ul.demo li {
 }
 .sidebar .sidebar-link.current {
   font-weight: 600;
-  color: #42b983;
+  color: #1489d4;
 }
 .sidebar .sidebar-link.new:after {
   content: "NEW";
@@ -852,7 +852,7 @@ ul.demo li {
   font-size: 10px;
   font-weight: 600;
   color: #fff;
-  background-color: #42b983;
+  background-color: #1489d4;
   line-height: 14px;
   padding: 0 4px;
   border-radius: 3px;
@@ -862,11 +862,11 @@ ul.demo li {
   top: -1px;
 }
 .sidebar .sidebar-link:hover {
-  border-bottom: 2px solid #42b983;
+  border-bottom: 2px solid #1489d4;
 }
 .sidebar .section-link.active {
   font-weight: bold;
-  color: #42b983;
+  color: #1489d4;
 }
 .sidebar .main-menu {
   margin-bottom: 20px;
@@ -895,10 +895,10 @@ ul.demo li {
   width: 125px;
 }
 .sidebar .become-backer {
-  border: 1px solid #42b983;
+  border: 1px solid #1489d4;
   border-radius: 2em;
   display: inline-block;
-  color: #42b983;
+  color: #1489d4;
   font-size: 0.8em;
   width: 125px;
   padding: 4px 0;
@@ -1203,7 +1203,7 @@ ul.demo li {
   padding: 0.1em 0.4em;
 }
 .style-guide a > .style-rule-tag {
-  color: #42b983;
+  color: #1489d4;
 }
 .style-guide sup {
   text-transform: uppercase;
@@ -1339,7 +1339,7 @@ ul.demo li {
 }
 .content h3:after {
   content: "#";
-  color: #42b983;
+  color: #1489d4;
   position: absolute;
   left: -0.7em;
   bottom: -2px;
@@ -1364,13 +1364,13 @@ ul.demo li {
   position: inherit;
 }
 .content a {
-  color: #42b983;
+  color: #1489d4;
   font-weight: 600;
 }
 .content blockquote {
   margin: 2em 0;
   padding-left: 20px;
-  border-left: 4px solid #42b983;
+  border-left: 4px solid #1489d4;
 }
 .content blockquote p {
   font-weight: 600;
@@ -1450,12 +1450,12 @@ ul.demo li {
   background-color: #f66;
 }
 .content p.success {
-  border-left-color: #42b983;
+  border-left-color: #1489d4;
 }
 .content p.success:before {
   content: "\f00c";
   font-family: FontAwesome;
-  background-color: #42b983;
+  background-color: #1489d4;
 }
 .guide-links {
   margin-top: 2em;
@@ -1509,7 +1509,7 @@ ul.demo li {
   }
   .nav-link:hover,
   .nav-link.current {
-    border-bottom: 2px solid #42b983;
+    border-bottom: 2px solid #1489d4;
   }
   #mobile-bar {
     display: block;
