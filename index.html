@@ -79,6 +79,7 @@
       <li><a class="section-link" data-scroll="" href="#Exemple">Exemple</a></li>
       <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-connexion-sso">Ouvrir l'interface de connexion</a></li>
       <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-creation-sso">Ouvrir l'interface de création de compte</a></li>
+      <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-mot-de-passe">Ouvrir l'interface de mot de passe oublié</a></li>
       <li><a class="section-link" data-scroll="" href="#Verifier-connexion">Vérifier si l'utilisateur est connecté</a></li>
       <li><a class="section-link" data-scroll="" href="#Deconnecter-utilisateur">Déconnecter un utilisateur</a></li>
       <li><a class="section-link" data-scroll="" href="#Evenements">Les Évènements</a></li>
@@ -239,6 +240,22 @@ Votre contact chez Comexposium devra également <b>autoriser tous les noms de do
 
 <p class="tip">Sur l'environnemement de pré-production, les emails que vous recevez normalement (création de compte, mot de passe oublié, newsletter... ) sont tous dirigés vers notre boite mail interne <b>dwebetdsi@gmail.com</b> dont vous pourrez demander l'accès à votre contact chez Comexposium.</p>
 
+<h2 id="Ouvrir-interface-mot-de-passe"><a href="#Ouvrir-interface-mot-de-passe" class="headerlink" title="Ouvrir-interface-mot-de-passe" data-scroll="">Ouvrir l'interface de mot de passe oublié</a></h2>
+<p>Voici un exemple ci-dessous qui ouvre l'interface de réinitilisation de mot de passe :</p>
+</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre>
+  <span class="line">$(<span class="keyword">document</span>).ready(<span class="keyword">function</span>(){</span>
+    <span class="line">$("<span class="string">#buttonpasswordforgottenSSO</span>").click(<span class="keyword">function</span>(){</span>
+      <span class="line"><span class="keyword">comexposiumCap</span>.<span class="string">openCap</span>('request-password');</span>
+    <span class="line">});</span>
+  <span class="line">});</span>
+</pre></td></tr></tbody></table></figure>
+
+<div class="demo">
+  <button id="myPasswordCap">Ouvrir l'interface de mot de passe oublié</button>
+</div>
+
+
 <h2 id="Verifier-connexion"><a href="#Verifier-connexion" class="headerlink" title="Vérifier si l'utilisateur est connecté" data-scroll="">Vérifier si l'utilisateur est connecté</a></h2>
 <p>Vous pouvez vérifier si un utilisateur est connecté. Cette méthode renvoie un booléen. <br /> <i>true</i> : l'utilisateur est connecté <br /> <i>false</i> : l'utilisateur n'est pas connecté</p>
 <!-- <figure class="highlight html">
@@ -351,6 +368,9 @@ $(document).ready(function(){
   $("#myOpenCapDisconnect").click(function(){
     comexposiumConnect.logoutUser();
     setTimeout(function(){window.location.reload();}, 1000);
+  });
+  $("#myPasswordCap").click(function(){
+    comexposiumCap.openCap('request-password');
   });
   $(document).on("comexposiumConnectLogged",function(event, email, token, isExhibitor){
    console.log(email, token, isExhibitor);
