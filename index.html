@@ -68,9 +68,9 @@
     </ul>
 
     <div class="list">
-      <h2>Guide <span class="versionGuide">v1.0.7</span> </h2>
+      <h2>Guide d'intégration <span class="versionGuide">v1.0.7</span> </h2>
       <ul class="menu-root">
-        <li><h3>Application Tierce</h3></li>
+        <li><h3>SDK</h3></li>
     <li>
       <a href="#intro" class="sidebar-link current" data-scroll="">ComexposiumConnect SSO</a>
     <ul class="menu-sub">
@@ -78,19 +78,22 @@
       <li><a class="section-link" data-scroll="" href="#script-loader">Le script loader</a></li>
       <li><a class="section-link" data-scroll="" href="#code-html">Le code HTML</a></li>
       <li><a class="section-link" data-scroll="" href="#Exemple">Exemple</a></li>
-      <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-connexion-sso">Ouvrir l'interface de connexion</a></li>
-      <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-creation-sso">Ouvrir l'interface de création de compte</a></li>
-      <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-mot-de-passe">Ouvrir l'interface de mot de passe oublié</a></li>
-      <li><a class="section-link" data-scroll="" href="#Verifier-connexion">Vérifier si l'utilisateur est connecté</a></li>
-      <li><a class="section-link" data-scroll="" href="#Deconnecter-utilisateur">Déconnecter un utilisateur</a></li>
-      <li><a class="section-link" data-scroll="" href="#Evenements">Les Évènements</a></li>
+      <li><a class="section-link" data-scroll="" href="#Methodes">Les Méthodes</a></li>
       <ul>
-        <li><a class="section-link" data-scroll="" href="#Widget-charge">comexposiumConnectLoaded</a></li>
-        <li><a class="section-link" data-scroll="" href="#Utilisateur-connecte">comexposiumConnectLogged</a></li>
-        <li><a class="section-link" data-scroll="" href="#Utilisateur-cree">comexposiumConnectRegisterOk</a></li>
+        <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-connexion-sso">Ouvrir l'interface de connexion</a></li>
+        <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-creation-sso">Ouvrir l'interface de création de compte</a></li>
+        <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-mot-de-passe">Ouvrir l'interface de mot de passe oublié</a></li>
+        <li><a class="section-link" data-scroll="" href="#Verifier-connexion">Vérifier si l'utilisateur est connecté</a></li>
+        <li><a class="section-link" data-scroll="" href="#Deconnecter-utilisateur">Déconnecter un utilisateur</a></li>
       </ul>
-      <li><a class="section-link" data-scroll="" href="#Recuperation-email">Récupérer les informations de l'utilisateur</a></li>
-      <li><a class="section-link" data-scroll="" href="#Erreurs">Codes d'erreurs</a></li>
+        <li><a class="section-link" data-scroll="" href="#Evenements">Les Évènements</a></li>
+        <ul>
+          <li><a class="section-link" data-scroll="" href="#Widget-charge">comexposiumConnectLoaded</a></li>
+          <li><a class="section-link" data-scroll="" href="#Utilisateur-connecte">comexposiumConnectLogged</a></li>
+          <li><a class="section-link" data-scroll="" href="#Utilisateur-cree">comexposiumConnectRegisterOk</a></li>
+        </ul>
+        <li><a class="section-link" data-scroll="" href="#Recuperation-email">Récupérer les informations de l'utilisateur</a></li>
+        <li><a class="section-link" data-scroll="" href="#Erreurs">Codes d'erreurs</a></li>
     </ul>
 </ul>
 
@@ -101,7 +104,7 @@
 
 <div class="content guide with-sidebar index-guide">
 
-<h1 id="intro" data-scroll="" class="headerlink">Introduction</h1>
+<h1 id="intro" data-scroll="" class="headerlink">ComexposiumConnect</h1>
 
     <p>Le widget ComexposiumConnect SSO est utilisé pour simplifier l'expérience de nos utilisateurs lorsqu'ils passent d'un service vers un autre.</p>
 
@@ -223,6 +226,10 @@ Votre contact chez Comexposium devra également <b>autoriser tous les noms de do
       <span class="tag">&lt;/body&gt;</span>
     <span class="tag">&lt;/html&gt;</span>
   </pre></td></tr></tbody></table></figure>
+
+<h2 id="Methodes"><a href="#Methodes" class="headerlink" title="Methodes" data-scroll="">Les méthodes</a></h2>
+
+<p>Les méthodes ci-dessous sont également disponibles via <a href="http://docs.comexposium-sso.com/" target="_blank">l'API ComexposiumConnect</a></p>
 
 <h2 id="Ouvrir-interface-connexion-sso"><a href="#Ouvrir-interface-connexion-sso" class="headerlink" title="Ouvrir-interface-connexion-sso" data-scroll="">Ouvrir l'interface de connexion</a></h2>
 <p>Voici un exemple ci-dessous qui ouvre l'interface de connexion SSO :</p>
@@ -397,6 +404,9 @@ $(document).ready(function(){
     alert("Vous êtes connecté au comexposiumConnect");
     $("#openCap, #OpenCap2, #myOpenCap, #myPasswordCap").html("Vous êtes déjà connectés");
   });
+  if (cxpm.version.useraccount.sdkBuild != undefined) {
+    $("#main > div.sidebar > div > div > ul > li:nth-child(1) > h3").html('SDK ' + '<span class="versionGuide">version ' + cxpm.version.useraccount.sdkBuild + '</span>')
+  }
 });
 </script>
 
