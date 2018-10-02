@@ -367,9 +367,7 @@ $(document).ready(function(){
   });
   $("#myOpenCapDisconnect").click(function(){
     comexposiumConnect.logoutUser();
-    if (!comexposiumCap.isUserLogged() && $("#openCap, #OpenCap2, #myOpenCap, #myPasswordCap").html() == 'Vous êtes déjà connectés') {
-      window.location.reload();
-    }
+    setTimeout(function(){window.location.reload();}, 1000);
   });
   $("#myPasswordCap").click(function(){
     comexposiumCap.openCap('request-password');
