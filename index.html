@@ -152,13 +152,22 @@
 La version injectée par le widget est :<br />
 <figure class="highlight js"><table>
   <tbody><tr><td class="code">
-    <pre><span class="line"><span class="name">window.</span><span class="string">cxpm</span><span class="name">.jQuery</span></span></pre></td></tr></tbody></table></figure></p>
+    <pre><span class="line"><span class="name">window.</span><span class="string">cxpm</span><span class="name">.jQuery</span></span></pre></td></tr></tbody></table>
+</figure></p>
 <p>
 <li>Si la variable "$" n'existe pas dans la page, nous la créons avec la version chargée.</li><br />
 <li>Si la variable "$" existe mais pas dans la bonne version, nous la copions dans window.cxpm.jQuery.</li>
 </p>
 
 <p>Une fois le script loader.js chargé et autorisé, vous avez accès aux variables globales <b>comexposiumCap</b> et <b>comexposiumConnect</b>.</p>
+
+<p>Vous pouver également vérifier la version du loader et du SDK avec lesquels vous travaillez :</p>
+
+<figure class="highlight js"><table>
+  <tbody><tr><td class="code">
+    <pre><span class="line"><span class="name">cxpm.</span><span class="string">version</span><span class="name">.useraccount</span></span><br /><span class="comment"><i>{loaderBuild: "201X.X.X", sdkBuild: "201X.X.X"}</i></span></pre></td></tr></tbody></table>
+</figure>
+
 <p>Il ne vous reste désormais plus qu'à inclure le <a href="#code-html" data-scroll="">code HTML</a> dans votre page pour faire fonctionner le widget.</p>
 
 
