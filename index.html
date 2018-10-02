@@ -367,16 +367,18 @@ $(document).ready(function(){
   });
   $("#myOpenCapDisconnect").click(function(){
     comexposiumConnect.logoutUser();
-    setTimeout(function(){window.location.reload();}, 1000);
+    if (!comexposiumCap.isUserLogged() && $("#openCap, #OpenCap2, #myOpenCap, #myPasswordCap").html() == 'Vous êtes déjà connectés') {
+      window.location.reload();
+    }
   });
   $("#myPasswordCap").click(function(){
     comexposiumCap.openCap('request-password');
   });
   $(document).on("comexposiumConnectLogged",function(event, email, token, isExhibitor){
-   console.log(email, token, isExhibitor);
-   alert("Vous êtes connecté au comexposiumConnect");
-   $("#openCap, #OpenCap2, #myOpenCap, #myPasswordCap").html("Vous êtes déjà connectés");
-});
+    console.log(email, token, isExhibitor);
+    alert("Vous êtes connecté au comexposiumConnect");
+    $("#openCap, #OpenCap2, #myOpenCap, #myPasswordCap").html("Vous êtes déjà connectés");
+  });
 });
 </script>
 
