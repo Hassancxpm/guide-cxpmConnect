@@ -1580,3 +1580,6 @@ ul.demo li {
 .versionGuide {
   font-size: 15px;
 }
+p {
+    text-align: justify;
+}
