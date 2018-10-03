@@ -159,7 +159,7 @@ La version injectée par le widget est :<br />
 <li>Si la variable "$" existe mais pas dans une version suffisamment récente, nous la copions dans window.cxpm.jQuery.</li>
 </p>
 
-<p>Une fois le script loader.js chargé et autorisé, vous avez accès aux variables globales <b>comexposiumCap</b> et <b>comexposiumConnect</b>.</p>
+<p>Une fois le script loader.min.js chargé et autorisé, vous avez accès aux variables globales <b>comexposiumCap</b> et <b>comexposiumConnect</b>.</p>
 
 <p>Vous pouver également vérifier la version du loader et du SDK avec lesquels vous travaillez :</p>
 
@@ -176,7 +176,7 @@ La version injectée par le widget est :<br />
 Les valeurs à renseigner dans les attributs du code HTML sont propres à chaque évènement, à chaque salon et à chaque session. Ils vous seront communiqués directement par votre contact chez Comexposium. <br />
 Votre contact chez Comexposium devra également <b>autoriser tous les noms de domaine sur lesquels vous appelez et chargez le widget</b> sans quoi vous aurez l'erreur suivante dans la console javascript de votre navigateur :<br /> <i><b style="color:#968e8e;">wrong application token</b></i>
 </p>
-<p>Une fois que tous vos noms de domaine ont été autorisés par Comexposium , que le <a href="#script-loader" data-scroll="">script loader.js</a> ainsi que votre version de jQuery sont bien chargés dans votre page, ajoutez le code suivant dans la partie body de votre code HTML où vous souhaitez intégrer le widget ComexposiumConnect :</p>
+<p>Une fois que tous vos noms de domaine ont été autorisés par Comexposium , que le <a href="#script-loader" data-scroll="">script loader.min.js</a> ainsi que votre version de jQuery sont bien chargés dans votre page, ajoutez le code suivant dans la partie body de votre code HTML où vous souhaitez intégrer le widget ComexposiumConnect :</p>
 <figure class="highlight html">
   <table><tbody><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"cxpmClientAccountWidget"</span> <br />     <span class="attr">data-salon</span>=<span class="string">"[SHOWROOM_NAME]"</span>
      <span class="attr">data-sessionSalon</span>=<span class="string">"[SHOWROOM_SESSION]"</span> <br />     <span class="attr">data-application</span>=<span class="string">"[YOUR_APPLICATION_ID]"</span>
