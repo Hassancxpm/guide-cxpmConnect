@@ -70,7 +70,7 @@
     <div class="list">
       <h2>Guide d'intégration</h2>
       <ul class="menu-root">
-        <li><h3>SDK</h3></li>
+        <li><h3>SDK preproduction</h3></li>
     <li>
       <a href="#intro" class="sidebar-link current" data-scroll="">ComexposiumConnect SSO</a>
     <ul class="menu-sub">
@@ -415,7 +415,7 @@ $(document).ready(function(){
   });
   $(document).on("comexposiumConnectLoaded",function(){
     if (cxpm.version.useraccount.sdkBuild != undefined) {
-      $("#main > div.sidebar > div > div > ul > li:nth-child(1) > h3").html('SDK ' + '<span class="versionGuide">version ' + cxpm.version.useraccount.sdkBuild + '</span>')
+      $("#main > div.sidebar > div > div > ul > li:nth-child(1) > h3").html('SDK preproduction ' + '<span class="versionGuide">version ' + cxpm.version.useraccount.sdkBuild + '</span>')
     }
   });
 });
