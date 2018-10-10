@@ -307,7 +307,7 @@ Votre contact chez Comexposium devra également <b>autoriser tous les noms de do
 <figure class="highlight js"><table><tbody><tr><td class="code"><pre>
   <span class="line">$(<span class="keyword">document</span>).ready(<span class="keyword">function</span>(){</span>
     <span class="line">$("<span class="string">#buttonGenericInterface</span>").click(<span class="keyword">function</span>(){</span>
-      <span class="line"><span class="keyword">comexposiumCap</span>.<span class="string">openGenericCap</span>('Title', 'Description');</span>
+      <span class="line"><span class="keyword">comexposiumCap</span>.<span class="string">openGenericCap</span>('Titre', 'Description');</span>
     <span class="line">});</span>
   <span class="line">});</span>
 </pre></td></tr></tbody></table></figure>
@@ -435,7 +435,7 @@ $(document).ready(function(){
     comexposiumCap.openCap('request-password');
   });
   $("#myGenericCap").click(function(){
-    comexposiumCap.openGenericCap('Title', 'Description');
+    comexposiumCap.openGenericCap('Titre', 'Description');
   });
   $(document).on("comexposiumConnectLogged",function(event, email, token, isExhibitor){
     console.log(email, token, isExhibitor);
