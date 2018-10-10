@@ -90,6 +90,7 @@
         <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-connexion-sso">Ouvrir l'interface de connexion</a></li>
         <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-creation-sso">Ouvrir l'interface de création de compte</a></li>
         <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-mot-de-passe">Ouvrir l'interface de mot de passe oublié</a></li>
+        <li><a class="section-link" data-scroll="" href="#Ouvrir-interface-generic">Ouvrir l'interface de messages génériques</a></li>
         <li><a class="section-link" data-scroll="" href="#Verifier-connexion">Vérifier si l'utilisateur est connecté</a></li>
         <li><a class="section-link" data-scroll="" href="#Deconnecter-utilisateur">Déconnecter un utilisateur</a></li>
       </ul>
@@ -300,6 +301,22 @@ Votre contact chez Comexposium devra également <b>autoriser tous les noms de do
   <button id="myPasswordCap">Ouvrir l'interface de mot de passe oublié</button>
 </div>
 
+<h2 id="Ouvrir-interface-generic"><a href="#Ouvrir-interface-generic" class="headerlink" title="Ouvrir-interface-generic" data-scroll="">Ouvrir l'interface de messages génériques</a></h2>
+<p>Voici un exemple ci-dessous qui ouvre l'interface d'affichage de messages génériques :</p>
+</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre>
+  <span class="line">$(<span class="keyword">document</span>).ready(<span class="keyword">function</span>(){</span>
+    <span class="line">$("<span class="string">#buttonGenericInterface</span>").click(<span class="keyword">function</span>(){</span>
+      <span class="line"><span class="keyword">comexposiumCap</span>.<span class="string">openGenericCap</span>('Title', 'Description');</span>
+    <span class="line">});</span>
+  <span class="line">});</span>
+</pre></td></tr></tbody></table></figure>
+<i><em style="font-size: 14px;">Le second paramètre "Description" accepte les éléments HTML (buttons, divs etc...)</em></i>
+
+<div class="demo">
+  <button id="myGenericCap">Ouvrir l'interface de messages génériques</button>
+</div>
+
 
 <h2 id="Verifier-connexion"><a href="#Verifier-connexion" class="headerlink" title="Vérifier si l'utilisateur est connecté" data-scroll="">Vérifier si l'utilisateur est connecté</a></h2>
 <p>Vous pouvez vérifier si un utilisateur est connecté. Cette méthode renvoie un booléen. <br /> <i>true</i> : l'utilisateur est connecté <br /> <i>false</i> : l'utilisateur n'est pas connecté</p>
@@ -416,6 +433,9 @@ $(document).ready(function(){
   });
   $("#myPasswordCap").click(function(){
     comexposiumCap.openCap('request-password');
+  });
+  $("#myGenericCap").click(function(){
+    comexposiumCap.openGenericCap('Title', 'Description');
   });
   $(document).on("comexposiumConnectLogged",function(event, email, token, isExhibitor){
     console.log(email, token, isExhibitor);
