@@ -263,7 +263,7 @@ Votre contact chez Comexposium devra également <b>autoriser tous les noms de do
 </pre></td></tr></tbody></table></figure>
 
 <div class="demo">
-  <button id="OpenCap2">Ouvrir l'interface de connexion SSO</button>
+  <button id="openCap2">Ouvrir l'interface de connexion SSO</button>
 </div>
 
 <h2 id="Ouvrir-interface-creation-sso"><a href="#Ouvrir-interface-creation-sso" class="headerlink" title="Ouvrir-interface-creation-sso" data-scroll="">Ouvrir l'interface de création de compte</a></h2>
@@ -417,7 +417,7 @@ $(document).ready(function(){
   $("#isUserLoggedDemo").click(function(){
     alert(comexposiumCap.isUserLogged())
   });
-  $("#openCap, #OpenCap2").click(function(){
+  $("#openCap, #openCap2").click(function(){
     comexposiumCap.openCap('login');
   });
   $("#myOpenCap").click(function(){
@@ -440,7 +440,7 @@ $(document).ready(function(){
   $(document).one("comexposiumConnectLogged",function(event, email, token, isExhibitor){
     console.log(email, token, isExhibitor);
     alert("Vous êtes connecté au comexposiumConnect");
-    $("#openCap, #OpenCap2, #myOpenCap, #myPasswordCap").html("Vous êtes déjà connectés");
+    $("#openCap, #openCap2, #myOpenCap, #myPasswordCap").html("Vous êtes déjà connectés");
     event.stopImmediatePropagation();
   });
   $(document).on("comexposiumConnectLoaded",function(){
