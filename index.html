@@ -425,6 +425,10 @@ $(document).ready(function(){
   });
   $("#myOpenCapDisconnect").click(function(){
     comexposiumCap.disconnectUser()
+    $("#openCap").html("Ouvrir l'interface de connexion SSO");
+    $("#openCap2").html("Ouvrir l'interface de connexion SSO");
+    $("#myOpenCap").html("Ouvrir l'interface de création SSO");
+    $("#myPasswordCap").html("Ouvrir l'interface de mot de passe oublié");
     alert("Vous êtes bien déconnecté !");
   });
   $("#myPasswordCap").click(function(){
