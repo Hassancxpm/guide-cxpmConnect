@@ -436,7 +436,7 @@ $(document).ready(function(){
     $("#openCap, #openCap2").html("Ouvrir l'interface de connexion SSO");
     $("#myOpenCap").html("Ouvrir l'interface de création SSO");
     $("#myPasswordCap").html("Ouvrir l'interface de mot de passe oublié");
-    $(".colorize").css('color', '#34495e;');
+    $(".colorize").css('color', '#34495e');
     alert("Vous êtes bien déconnecté !");
   });
   $("#myPasswordCap").click(function(){
@@ -448,13 +448,13 @@ $(document).ready(function(){
   $(document).on("comexposiumConnectLogged",function(event, email, token, isExhibitor){
     console.log(email, token, isExhibitor);
     $("#openCap, #openCap2, #myOpenCap, #myPasswordCap").html("Vous êtes déjà connectés");
-    $(".colorize").css('color', '#7ad17a');
+    $(".colorize").css('color', 'limegreen');
   });
   $(document).one("comexposiumConnectLogged",function(event, email, token, isExhibitor){
     console.log(email, token, isExhibitor);
     alert("Vous êtes connecté au comexposiumConnect");
     $("#openCap, #openCap2, #myOpenCap, #myPasswordCap").html("Vous êtes déjà connectés");
-    $(".colorize").css('color', '#7ad17a');
+    $(".colorize").css('color', 'limegreen');
     event.stopImmediatePropagation();
   });
   $(document).on("comexposiumConnectLoaded",function(){
