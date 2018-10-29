@@ -454,6 +454,8 @@ $(document).ready(function(){
   $(document).one("comexposiumConnectLogged",function(event, email, token, isExhibitor){
     console.log(email, token, isExhibitor);
     alert("Vous êtes connecté au comexposiumConnect");
+    $("#openCap, #openCap2, #myOpenCap, #myPasswordCap").html("Vous êtes déjà connectés");
+    $("#moncercle").css('border', '#7ad17a 2px solid');
     event.stopImmediatePropagation();
   });
   $(document).on("comexposiumConnectLoaded",function(){
