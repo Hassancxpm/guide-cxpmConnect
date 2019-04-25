@@ -93,6 +93,7 @@
             <li><a class="section-link" data-scroll="" href="#Authentifier-utilisateur">Authentifier un utilisateur</a></li>
             <li><a class="section-link" data-scroll="" href="#Creer-nouvel-utilisateur">Créer un nouvel utilisateur</a></li>
             <li><a class="section-link" data-scroll="" href="#Verifier-connexion">Vérifier si l'utilisateur est connecté</a></li>
+            <li><a class="section-link" data-scroll="" href="#Verifier-status">Vérifier le status de l'utilisateur connecté</a></li>
             <li><a class="section-link" data-scroll="" href="#Deconnecter-utilisateur">Déconnecter un utilisateur</a></li>
           </ul>
           <li><a class="section-link" data-scroll="" href="#Evenements">Les Évènements</a></li>
@@ -376,6 +377,17 @@ Votre contact chez Comexposium devra également <b>autoriser tous les noms de do
   <button id="isUserLoggedDemo">Vérifier si l'utilisateur est connecté</button>
 </div>
 
+<h2 id="Verifier-status"><a href="#Verifier-status" class="headerlink" title="Vérifier le status de l'utilisateur connecté" data-scroll="">Vérifier le status de l'utilisateur connecté</a></h2>
+<p>Vous pouvez vérifier le status de l'utilisateur connecté. Cette méthode retourne un tableau contenant les status de l'utilisateur connecté.<br />Si l'utilisateur n'a aucun status, la méthode retournera un tableau vide.</p>
+<figure class="highlight js"><table><tbody><tr><td class="code"><pre>
+    <span class="line"><span class="keyword">comexposiumConnect</span>.<span class="string">getUserTypes</span>(<span class="keyword">function</span>(<span class="string">listOfUserType</span>){
+      <span class="line">console.log(<span class="keyword">listOfUserType</span>)</span>
+    });</span>
+</pre></td></tr></tbody></table></figure>
+
+<div class="demo">
+  <button id="checkUserStatus">Vérifier le status de l'utilisateur</button>
+</div>
 
 <h2 id="Deconnecter-utilisateur"><a href="#Deconnecter-utilisateur" class="headerlink" title="Déconnecter un utilisateur" data-scroll="">Déconnecter un utilisateur</a></h2>
 <p>Vous pouvez déconnecter l'utilisateur comme ceci :</p>
@@ -448,6 +460,11 @@ Il est ensuite possible de récupérer l'email de l'utilisateur, le jeton JWT et
 $(document).ready(function(){
   $("#isUserLoggedDemo").click(function(){
     alert(comexposiumCap.isUserLogged())
+  });
+  $("#checkUserStatus").click(function(){
+    comexposiumConnect.getUserTypes(function(listOfUserType) {
+      alert('User Types : ' + listOfUserType.join(", "))
+    });
   });
   $("#openCap, #openCap2").click(function(){
     comexposiumCap.openCap('login');
