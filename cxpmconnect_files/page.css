@@ -927,7 +927,7 @@ ul.demo li {
     box-sizing: border-box;
   }
   .sidebar .sidebar-inner-index {
-    padding: 10px 10px 10px 20px;
+    padding: 0px 10px 10px 20px;
   }
   .sidebar .search-query {
     width: 200px;
