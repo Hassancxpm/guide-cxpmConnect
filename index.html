@@ -101,6 +101,8 @@
           <ul>
             <li><a class="section-link" data-scroll="" href="#Widget-charge">comexposiumConnectLoaded</a></li>
             <li><a class="section-link" data-scroll="" href="#Utilisateur-connecte">comexposiumConnectLogged</a></li>
+            <li><a class="section-link" data-scroll="" href="#Utilisateur-deconnecte">comexposiumConnectLogout</a></li>
+            <li><a class="section-link" data-scroll="" href="#Utilisateur-tokenexpired">comexposiumConnectTokenExpired</a></li>
             <li><a class="section-link" data-scroll="" href="#Utilisateur-cree">comexposiumConnectRegisterOk</a></li>
           </ul>
           <li><a class="section-link" data-scroll="" href="#Recuperation-email">Récupérer les informations de l'utilisateur</a></li>
@@ -424,6 +426,45 @@ Vous pouvez écouter vos évènements personnalisés à partir du moment où le 
     <span class="line"><span class="comment"><i>Execute quelque chose</i></span></span>
   <span class="line">});</span>
 </pre></td></tr></tbody></table></figure>
+
+<h3 id="Utilisateur-deconnecte"><a href="#Utilisateur-deconnecte" class="headerlink" title="Utilisateur deconnecté"
+    data-scroll="">comexposiumConnectLogout</a></h3>
+<p>Cet événement est déclenché lorsque l'utilisateur est déconnecté. Cela peut se produire lorsque l'utilisateur a été
+déconnecté dans un autre onglet ou dans une autre application :</p>
+<figure class="highlight js">
+  <table>
+    <tbody>
+      <tr>
+        <td class="code">
+          <pre>
+  <span class="line">$(<span class="keyword">document</span>).<span class="keyword">on</span>("comexposiumConnectLogout",<span class="keyword">function</span>(){
+    <span class="line"><span class="comment"><i>Execute quelque chose</i></span></span>
+  <span class="line">});</span>
+</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
+
+<h3 id="Utilisateur-tokenexpired"><a href="#Utilisateur-tokenexpired" class="headerlink" title="Utilisateur token expiré"
+    data-scroll="">comexposiumConnectTokenExpired</a></h3>
+<p>Cet événement est déclenché à l'expiration du JWT. N'oubliez pas que le jeton JWT a une date de validée :</p>
+<figure class="highlight js">
+  <table>
+    <tbody>
+      <tr>
+        <td class="code">
+          <pre>
+  <span class="line">$(<span class="keyword">document</span>).<span class="keyword">on</span>("comexposiumConnectTokenExpired",<span class="keyword">function</span>(){
+    <span class="line"><span class="comment"><i>Execute quelque chose</i></span></span>
+  <span class="line">});</span>
+</pre>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</figure>
 
 <h3 id="Utilisateur-cree"><a href="#Utilisateur-cree" class="headerlink" title="Utilisateur creé" data-scroll="">comexposiumConnectRegisterOk</a></h3>
 <p>Cet événement indique que l'utilisateur a fermé l'interface après une création de compte.
